@@ -1,13 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet} from 'react-native';
 import Calendar from 'react-native-swipe-calendar';
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
+import WelcomeScreen from './screens/WelcomeScreen/WelcomeScreen';
+
+
+
+const FONT_DEFAULT = 'Lato';
 
 export default function App() {
+
+  const [loaded] = useFonts({
+    [FONT_DEFAULT]: require('./assets/fonts/Lato-Regular.ttf'),
+  });
+
+
+
+if (!loaded) return <AppLoading />;
+
   return (
-    <View style={styles.container}>
-      <Text>:) :(</Text>
-      <StatusBar style="auto" />
-    </View>
+    <WelcomeScreen/>
   );
 }
 
