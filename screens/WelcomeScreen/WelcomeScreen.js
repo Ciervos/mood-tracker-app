@@ -3,7 +3,7 @@ import {Text, View,Image,Button,Pressable} from 'react-native';
 import styles from './styles';
 
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({navigation}) => {
 
 
   return (
@@ -13,7 +13,9 @@ const WelcomeScreen = () => {
         source={require('../../imgs/logowhite.png')}
       />
      
-    <Pressable style={styles.button}>
+    <Pressable style={styles.button} 
+    onPress={() => navigation.navigate('Main')}
+    >
     <Text style={styles.generaltext}>Start</Text>
     </Pressable>
      
