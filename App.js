@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { StyleSheet} from 'react-native';
-import Calendar from 'react-native-swipe-calendar';
+
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import AppNavigator from './navigation/AppNavigator';
