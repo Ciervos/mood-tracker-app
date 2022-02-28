@@ -12,6 +12,12 @@ const styles = StyleSheet.create({
       generaltext:{
        color: colors.color2, 
        fontFamily: 'Lato',  
+      },
+      ourday:{
+        
+       height: 300, 
+       width: 300,
+       
       }
 
   
