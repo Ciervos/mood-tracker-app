@@ -15,18 +15,12 @@ const AppNavigator = () => (
       <Stack.Screen name="Welcome"
        component={WelcomeScreen}
        options={{ title: '',
-       headerStyle: {
-        backgroundColor: colors.maincolor
-      }}} />
+       headerShown: false}} />
 
       <Stack.Screen name="Main" 
       component={MainNavigator}
       options={{ title: '' ,
-      headerStyle: {
-       backgroundColor: colors.maincolor
-     },
-      headerTintColor: colors.color3
-     }} />
+      headerShown: false}} />
   </Stack.Navigator>
    </NavigationContainer>
   
