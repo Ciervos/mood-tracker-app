@@ -4,6 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MainScreen from '../../screens/MainScreen/MainScreen';
 import SettingScreen from '../../screens/SettingScreen/SettingScreen';
 import InfoScreen from '../../screens/InfoScreen/InfoScreen';
+import HistorialScreen from '../../screens/HistorialScreen/HistorialScreen';
+import MoodNavigator from '../mood';
 import colors from '../../constants/colors';
 
 const BottomTabs = createBottomTabNavigator();
@@ -20,7 +22,7 @@ const TabNavigator = () => {
     >
       <BottomTabs.Screen
         name="MainTab"
-        component={MainScreen}
+        component={MoodNavigator}
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={styles.item}>
@@ -29,6 +31,18 @@ const TabNavigator = () => {
           )
         }}
       />
+     <BottomTabs.Screen
+        name="HistorialTab"
+        component={HistorialScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <View style={styles.item}>
+               <Text style={styles.text}>Guardados</Text>
+            </View>
+          )
+        }}
+      /> 
+
       <BottomTabs.Screen
         name="InfoTab"
         component={InfoScreen}
