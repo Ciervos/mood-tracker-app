@@ -12,7 +12,13 @@ const styles = StyleSheet.create({
       generaltext:{
        color: colors.color2, 
        fontFamily: 'Lato',  
-      }
+      },
+      item:{
+       width: 200,
+       height: 30,
+       margin: 3,
+      },
+
 
   
 });
