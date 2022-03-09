@@ -17,7 +17,7 @@ const [todayColors,setTodayColors] = useState(['#4c669f', '#3b5998', '#192f6a','
 
 const updateColors= () =>{
 
-  console.log("color calcular")
+  
 }
 
 

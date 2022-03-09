@@ -3,10 +3,12 @@ import {Text, View,FlatList,TouchableHighlight,Modal} from 'react-native';
 import styles from './styles';
 import {EMOTIONS} from '../../data/emotions';
 import ModalComponent from '../../components/ModalComponent';
+import calculateDay from '../../functions/calculateDay/index'
+
 
 
 const MoodScreen = () => {
-
+  
 const [itemSelected,setItemSelected] = useState('')
 const [txtForModal,setTxtForModal] = useState('')
 const [modalVisible,setModalVisible] = useState(false)
@@ -17,7 +19,8 @@ const selectingItem = item =>{
   setModalVisible(!modalVisible)
 }
 const handleConfirm = () =>{
-  //Agregar lógica de confirmación
+  calculateDay(itemSelected)
+
   setModalVisible(!modalVisible)
 }
 
